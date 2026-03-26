@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>[##_page_title_##]</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <meta property="og:site_name" content="[##_title_##]">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@bc1qwerty">
+  <link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+</head>
+<body id="[##_body_id_##]">
+<s_t3>
+<div id="wrap">
+
+  <!-- 헤더 -->
+  <header id="header">
+    <div class="header-inner">
+      <h1 class="logo"><a href="[##_blog_link_##]">[##_title_##]</a></h1>
+      <div class="header-right">
+        <div class="search-box">
+          <input class="search-input" type="text" placeholder="검색..." onkeypress="if(event.keyCode==13){window.location.href='/search/'+encodeURIComponent(this.value)}">
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="테마 전환"><span class="theme-icon"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 컨테이너 -->
+  <div id="container">
+    <div class="content-wrap">
+
+      <!-- 메인 콘텐츠 -->
+      <main id="content">
+
+        <!-- 글 목록 (홈/카테고리) -->
+        <s_index_article_rep>
+        <article class="post-item">
+          <a href="[##_article_rep_link_##]" class="post-link">
+            <s_article_rep_thumbnail>
+            <div class="post-thumb" style="background-image:url('[##_article_rep_thumbnail_url_##]')"></div>
+            </s_article_rep_thumbnail>
+            <div class="post-info">
+              <s_article_rep_category>
+              <span class="post-cat">[##_article_rep_category_##]</span>
+              </s_article_rep_category>
+              <h2 class="post-title">[##_article_rep_title_##]</h2>
+              <p class="post-summary">[##_article_rep_summary_##]</p>
+              <time class="post-date">[##_article_rep_date_##]</time>
+            </div>
+          </a>
+        </article>
+        </s_index_article_rep>
+
+        <!-- 검색/카테고리 리스트 -->
+        <s_list>
+        <h2 class="list-title"><b>[##_list_conform_##]</b> <span>[##_list_count_##]</span></h2>
+        <s_list_rep>
+        <article class="post-item">
+          <a href="[##_list_rep_link_##]" class="post-link">
+            <s_list_rep_thumbnail>
+            <div class="post-thumb" style="background-image:url('[##_list_rep_thumbnail_raw_url_##]')"></div>
+            </s_list_rep_thumbnail>
+            <div class="post-info">
+              <h2 class="post-title">[##_list_rep_title_##]</h2>
+              <p class="post-summary">[##_list_rep_summary_##]</p>
+              <div class="post-meta-line">
+                <a href="[##_list_rep_category_link_##]" class="post-cat">[##_list_rep_category_##]</a>
+                <time class="post-date">[##_list_rep_regdate_##]</time>
+              </div>
+            </div>
+          </a>
+        </article>
+        </s_list_rep>
+        <s_list_empty>
+        <div class="empty-msg">해당하는 글이 없습니다.</div>
+        </s_list_empty>
+        </s_list>
+
+        <!-- 페이지네이션 -->
+        <s_paging>
+        <div class="pagination">
+          <a [##_prev_page_##] class="pg-prev [##_no_more_prev_##]">&laquo;</a>
+          <s_paging_rep>
+          <a [##_paging_rep_link_##] class="pg-num">[##_paging_rep_link_num_##]</a>
+          </s_paging_rep>
+          <a [##_next_page_##] class="pg-next [##_no_more_next_##]">&raquo;</a>
+        </div>
+        </s_paging>
+
+        <!-- 개별 글 (퍼머링크) -->
+        <s_article_rep>
+        <s_permalink_article_rep>
+        <article class="article">
+          <div class="article-head">
+            <s_article_rep_category>
+            <a href="[##_article_rep_category_link_##]" class="article-cat">[##_article_rep_category_##]</a>
+            </s_article_rep_category>
+            <h1 class="article-title">[##_article_rep_title_##]</h1>
+            <div class="article-meta">
+              <time>[##_article_rep_date_##]</time>
+              <span>[##_article_rep_author_##]</span>
+              [##_s_ad_isolation_##]
+            </div>
+          </div>
+          <div class="article-body" id="article-view">[##_article_rep_desc_##]</div>
+          <div class="article-foot">
+            <s_tag_label>
+            <div class="article-tags">
+              <span class="tags-label">Tag</span>
+              [##_tag_label_rep_##]
+            </div>
+            </s_tag_label>
+            <div class="article-nav">
+              <s_article_prev>
+              <a href="[##_article_prev_link_##]" class="nav-prev"><span>이전</span> [##_article_prev_title_##]</a>
+              </s_article_prev>
+              <s_article_next>
+              <a href="[##_article_next_link_##]" class="nav-next"><span>다음</span> [##_article_next_title_##]</a>
+              </s_article_next>
+            </div>
+            <s_article_related>
+            <div class="article-related">
+              <h3>관련글</h3>
+              <ul>
+                <s_article_related_rep>
+                <li><a href="[##_article_related_rep_link_##]">[##_article_related_rep_title_##] <time>[##_article_related_rep_date_##]</time></a></li>
+                </s_article_related_rep>
+              </ul>
+            </div>
+            </s_article_related>
+            <div class="cta-banner">
+              <strong>더 깊이 있는 비트코인 이야기</strong>
+              <p>비트코인의 기술, 경제학, 철학을 체계적으로 학습할 수 있습니다.</p>
+              <a href="https://learn.txid.uk/ko/" target="_blank" rel="noopener" class="cta-btn">learn.txid.uk 방문하기</a>
+            </div>
+            <div class="article-comments"><s_rp>[##_comment_group_##]</s_rp></div>
+          </div>
+        </article>
+        </s_permalink_article_rep>
+        </s_article_rep>
+
+        <!-- 보호글 -->
+        <s_article_protected>
+        <s_permalink_article_rep>
+        <div class="protected">
+          <h2>[##_article_rep_title_##]</h2>
+          <p>보호되어 있는 글입니다.</p>
+          <form onsubmit="[##_article_dissolve_##]">
+            <input type="password" id="[##_article_password_##]" name="[##_article_password_##]" placeholder="비밀번호">
+            <button type="submit">확인</button>
+          </form>
+        </div>
+        </s_permalink_article_rep>
+        </s_article_protected>
+
+        <!-- 공지사항 -->
+        <s_notice_rep>
+        <s_index_article_rep>
+        <article class="post-item">
+          <a href="[##_notice_rep_link_##]" class="post-link">
+            <div class="post-info">
+              <span class="post-cat">공지</span>
+              <h2 class="post-title">[##_notice_rep_title_##]</h2>
+              <p class="post-summary">[##_notice_rep_summary_##]</p>
+              <time class="post-date">[##_notice_rep_simple_date_##]</time>
+            </div>
+          </a>
+        </article>
+        </s_index_article_rep>
+        <s_permalink_article_rep>
+        <article class="article">
+          <div class="article-head">
+            <span class="article-cat">공지사항</span>
+            <h1 class="article-title">[##_notice_rep_title_##]</h1>
+            <div class="article-meta"><time>[##_notice_rep_date_##]</time></div>
+          </div>
+          <div class="article-body" id="article-view">[##_notice_rep_desc_##]</div>
+        </article>
+        </s_permalink_article_rep>
+        </s_notice_rep>
+
+        <!-- 페이지 -->
+        <s_page_rep>
+        <s_permalink_article_rep>
+        <article class="article">
+          <div class="article-head">
+            <h1 class="article-title">[##_article_rep_title_##]</h1>
+          </div>
+          <div class="article-body" id="article-view">[##_article_rep_desc_##]</div>
+        </article>
+        </s_permalink_article_rep>
+        </s_page_rep>
+
+        <!-- 태그 클라우드 -->
+        <s_tag>
+        <div class="tag-cloud">
+          <h2>태그</h2>
+          <div class="tag-list"><s_tag_rep><a href="[##_tag_link_##]" class="[##_tag_class_##]">[##_tag_name_##]</a> </s_tag_rep></div>
+        </div>
+        </s_tag>
+
+        <!-- 방명록 -->
+        <s_guest>
+        <div class="guestbook"><s_rp>[##_guestbook_group_##]</s_rp></div>
+        </s_guest>
+
+        <!-- 커버 -->
+        <s_cover_group>
+        <s_cover_rep>
+        <s_cover name='thumbnail'>
+        <div class="cover-section">
+          <h2 class="cover-title">[##_cover_title_##]</h2>
+          <div class="cover-list">
+            <s_cover_item>
+            <a href="[##_cover_item_url_##]" class="cover-item">
+              <strong>[##_cover_item_title_##]</strong>
+              <s_cover_item_article_info>
+              <span class="cover-meta">[##_cover_item_category_##] · [##_cover_item_simple_date_##]</span>
+              </s_cover_item_article_info>
+            </a>
+            </s_cover_item>
+          </div>
+        </div>
+        </s_cover>
+        </s_cover_rep>
+        </s_cover_group>
+
+      </main>
+
+      <!-- 사이드바 -->
+      <aside id="sidebar">
+        <s_sidebar>
+        <s_sidebar_element>
+        <div class="sb-profile">
+          <img src="[##_image_##]" alt="프로필" class="sb-avatar">
+          <strong class="sb-name">[##_title_##]</strong>
+          <p class="sb-desc">[##_desc_##]</p>
+          [##_subscription_button_##]
+        </div>
+        </s_sidebar_element>
+        </s_sidebar>
+        <div class="sb-site-banner">
+          <a href="https://learn.txid.uk/ko/" target="_blank" rel="noopener">
+            <strong>learn.txid.uk</strong>
+            <span>비트코인을 제대로 배우는 곳</span>
+          </a>
+        </div>
+        <s_sidebar>
+        <s_sidebar_element>
+        <div class="sb-section sb-categories">
+          <nav>[##_category_list_##]</nav>
+        </div>
+        </s_sidebar_element>
+        <s_sidebar_element>
+        <div class="sb-section sb-tags">
+          <h3 class="sb-heading">태그</h3>
+          <div class="sb-tag-list"><s_random_tags><a href="[##_tag_link_##]" class="[##_tag_class_##]">[##_tag_name_##]</a> </s_random_tags></div>
+        </div>
+        </s_sidebar_element>
+        <s_sidebar_element>
+        <div class="sb-section sb-recent">
+          <h3 class="sb-heading">최근글</h3>
+          <ul class="sb-list">
+            <s_rctps_rep>
+            <li><a href="[##_rctps_rep_link_##]"><strong>[##_rctps_rep_title_##]</strong><time>[##_rctps_rep_date_##]</time></a></li>
+            </s_rctps_rep>
+          </ul>
+        </div>
+        </s_sidebar_element>
+        </s_sidebar>
+      </aside>
+
+    </div><!-- .content-wrap -->
+  </div><!-- #container -->
+
+  <!-- 푸터 -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="https://learn.txid.uk" target="_blank" rel="noopener">txid.uk</a>
+        <a href="https://x.com/bc1qwerty" target="_blank" rel="noopener">X</a>
+        <a href="https://bsky.app/profile/txid.uk" target="_blank" rel="noopener">Bluesky</a>
+        <a href="https://mastodon.social/@bc1qwerty" target="_blank" rel="noopener">Mastodon</a>
+        <a href="https://njump.me/npub16qucsfagff58mkac3ynwqyy9rkhw6wgnjk6xre2eagfqxkudqngs4gfc2d" target="_blank" rel="noopener">Nostr</a>
+      </div>
+      <p class="copyright">&copy; [##_title_##]</p>
+    </div>
+  </footer>
+
+</div><!-- #wrap -->
+</s_t3>
+
+<script>
+(function(){
+  var s=localStorage.getItem('theme'),d=matchMedia('(prefers-color-scheme:dark)').matches,t=s||(d?'dark':'light');
+  document.documentElement.setAttribute('data-theme',t);
+  u(t);
+  function u(t){var e=document.querySelector('.theme-icon');if(e)e.textContent=t==='dark'?'\u2600\uFE0F':'\uD83C\uDF19';}
+  window.toggleTheme=function(){var c=document.documentElement.getAttribute('data-theme'),n=c==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('theme',n);u(n);};
+  document.addEventListener('DOMContentLoaded',function(){u(t);});
+})();
+</script>
+</body>
+</html>
